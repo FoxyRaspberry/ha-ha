@@ -40,3 +40,37 @@ In my free time, I study English, web-development (I even made a [website for my
 * JavaScript
 * Git, GitHub
 * Figma
+
+---
+
+## Code example
+
+Implementing an animated frame in CSS.
+
+```css
+.experience__frame {
+  margin: 30px;
+  border: 8px solid #a843c9;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  background: #cfacf4;
+  box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+  animation: frame 10s infinite;
+}
+
+@keyframes frame {
+  0% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+  }
+  25% {
+    border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+    box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+  }
+}
+```
