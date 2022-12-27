@@ -74,3 +74,19 @@ Implementing an animated frame in CSS.
   }
 }
 ```
+
+---
+
+## Experience and education
+
+* HTML Academy
+* HTML and CSS Tutorials on the w3schools
+* RS Schools Course «JavaScript/Front-end»
+* [Resume in native HTML and CSS](https://github.com/FoxyRaspberry/resume)
+
+---
+
+## Languages
+
+* Russian — native
+* English — B1 (EPAM English test result)
