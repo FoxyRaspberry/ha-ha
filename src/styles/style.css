@@ -1,5 +1,5 @@
 :root {
-  --background-color: linear-gradient(rgb(90, 30, 181), rgba(200, 155, 255, 0.804), rgb(218, 200, 250), rgb(233, 228, 241));
+  --background: linear-gradient(rgb(79, 47, 109), rgb(66, 16, 139), rgb(79, 35, 145), rgb(98, 50, 170), rgb(106, 68, 163),rgb(120, 87, 168), rgb(139, 103, 193), rgba(200, 155, 255, 0.804), rgb(218, 200, 250), rgb(216, 205, 235));
 }
 
 /* region Reset */
@@ -16,16 +16,32 @@ body {
 }
 /* endregion Reset */
 
-/* region Common CSS-classes */
+/* region Common rules */
+body {
+  background: var(--background);
+  color: white;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}
+
 .wrapper {
   margin: auto;
 }
-/* endregion Common CSS-classes */
+/* endregion Common rules */
 
 /* region Header section */
 .header__section {
   font-family: "Mali", cursive;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .header__container {
@@ -44,14 +60,39 @@ body {
   text-align: center;
 }
 
+.header__photo-container {
+  padding: 10px;
+  text-align: center;
+}
+
 .header__photo {
-  width: 200px;
-  height: 200px;
+  border-radius: 70px;
+  box-shadow: 20px -10px 20px 5px rgb(111 190 252 / 79%);
+  width: 100%;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 570px) {
+  .header__photo {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__photo {
+    width: 300px;
+  }
 }
 /* endregion Header section */
 
 /* region Content section */
+.content__section {
+  font-family: "Mali", cursive;
+  font-size: 30px;
+}
+
 .content__grid-container {
+  padding: 0px 20px;
   display: grid;
   justify-content: space-around;
   grid-template-areas: 
@@ -72,6 +113,20 @@ body {
     "education skills"
     "courses languages"
     "code-example code-example";
+    column-gap: 70px;
+  }
+
+  .law-list,
+  .courses-list,
+  .contacts-list,
+  .languages-list,
+  .code-example__example-container {
+    margin: 0px;
+  }
+
+  .it-list {
+    padding-top: 20px;
+    margin: 0px;
   }
 }
 
@@ -89,6 +144,11 @@ body {
 
 .code-example__container {
   grid-area: code-example;
+}
+
+.code-example__example-container {
+  overflow-x: auto;
+  padding: 10px;
 }
 
 .contacts__container {
@@ -133,36 +193,10 @@ body {
 }
 /* endregion Footer section */
 
-
-
-
-
-.header__section {
-  background-color: rgb(209, 231, 249);
-}
-
-.header__title {
-  background-color: rgb(64, 166, 255);
-}
-
-.header__photo {
-  background-color: rgb(130, 197, 255);
-}
-
-.content__section {
-  padding-top: 20px;
-  background-color: rgb(200, 185, 246);
-}
-
-article {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  background-color: rgb(90, 0, 174);
-}
-
 .footer__year,
 .footer__github,
 .footer__rsschool {
   background-color: rgb(86, 94, 186);
 }
+
+
