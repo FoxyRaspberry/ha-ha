@@ -28,6 +28,10 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  margin: 0;
+}
+
 p {
   margin: 0;
   text-align: justify;
@@ -117,15 +121,11 @@ p {
   }
 
   .law-list,
+  .it-list,
   .courses-list,
   .contacts-list,
   .languages-list,
   .code-example__example-container {
-    margin: 0px;
-  }
-
-  .it-list {
-    padding-top: 20px;
     margin: 0px;
   }
 }
@@ -159,6 +159,10 @@ p {
   grid-area: skills;
 }
 
+.skills__it-title {
+  margin-top: 20px;
+}
+
 .languages__container {
   grid-area: languages;
 }
@@ -168,6 +172,8 @@ p {
 .footer__section {
   font-family: "Mali", cursive;
   font-size: 20px;
+  background: white;
+  color: black;
 }
 
 .footer__container {
@@ -175,15 +181,36 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  row-gap: 30px;
+  padding: 10px;
 }
 
-.footer__year,
-.footer__github,
-.footer__rsschool {
-  padding-top: 10px;
-  width: 200px;
-  height: 50px;
+.footer__github-container,
+.footer__rsschool-container {
   text-align: center;
+  font-size: 25px;
+}
+
+.footer__year{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.github-container {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+.github-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.rsschool-logo {
+  width: 150px;
+  height: 50px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -192,11 +219,3 @@ p {
   }
 }
 /* endregion Footer section */
-
-.footer__year,
-.footer__github,
-.footer__rsschool {
-  background-color: rgb(86, 94, 186);
-}
-
-
