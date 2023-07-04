@@ -1,0 +1,268 @@
+:root {
+  --background: linear-gradient(rgb(79, 47, 109), rgb(66, 16, 139), rgb(79, 35, 145), rgb(98, 50, 170), rgb(106, 68, 163),rgb(120, 87, 168), rgb(139, 103, 193), rgba(200, 155, 255, 0.804), rgb(218, 200, 250), rgb(216, 205, 235));
+}
+
+/* region Reset */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+/* endregion Reset */
+
+/* region Common rules */
+body {
+  background: var(--background);
+  color: white;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}
+
+.wrapper {
+  width: 300px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 708px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+  }
+}
+/* endregion Common rules */
+
+/* region Header section */
+.header__section {
+  font-family: "Mali", cursive;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__section {
+    font-size: 40px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1280px) {
+  .header__container {
+    flex-direction: row;
+  }
+}
+
+.header__title {
+  text-align: center;
+}
+
+.header__photo-container {
+  text-align: center;
+}
+
+.header__photo {
+  border-radius: 70px;
+  box-shadow: 20px -10px 20px 5px rgb(111 190 252 / 79%);
+  width: 100%;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__photo {
+    max-width: 400px;
+  }
+}
+/* endregion Header section */
+
+/* region Content section */
+.content__section {
+  font-family: "Mali", cursive;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .content__section {
+    font-size: 30px;
+  }
+}
+
+.content__grid-container {
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas: 
+    "about-me"
+    "education"
+    "courses"
+    "skills"
+    "languages"
+    "code-example"
+    "contacts";
+  row-gap: 20px;
+}
+
+@media screen and (min-width: 1280px) {
+  .content__grid-container {
+    grid-template-areas: 
+    "about-me contacts"
+    "education skills"
+    "courses languages"
+    "code-example code-example";
+    column-gap: 70px;
+  }
+
+  .law-list,
+  .it-list,
+  .courses-list,
+  .contacts-list,
+  .languages-list,
+  .code-example__example-container {
+    margin: 0px;
+  }
+}
+
+.about-me__container {
+  grid-area: about-me;
+  width: 300px;
+}
+
+.education__container {
+  grid-area: education;
+  width: 300px;
+}
+
+.courses__container {
+  grid-area: courses;
+  width: 300px;
+}
+
+.code-example__container {
+  grid-area: code-example;
+  width: 300px;
+}
+
+.code-example__example-container {
+  overflow-x: auto;
+  padding: 10px;
+  width: 300px;
+}
+
+.contacts__container {
+  grid-area: contacts;
+  width: 300px;
+}
+
+.skills__container {
+  grid-area: skills;
+  width: 300px;
+}
+
+.skills__it-title {
+  margin-top: 20px;
+}
+
+.languages__container {
+  grid-area: languages;
+  width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me__container,
+  .education__container,
+  .courses__container,
+  .code-example__container,
+  .code-example__example-container,
+  .contacts__container,
+  .skills__container,
+  .languages__container{
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .code-example__container,
+  .code-example__example-container {
+    width: 1200px;
+  }
+}
+/* endregion Content section */
+
+/* region Footer section */
+.footer__section {
+  font-family: "Mali", cursive;
+  font-size: 20px;
+  background: white;
+  color: black;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 20px;
+}
+
+.footer__github-container,
+.footer__rsschool-container {
+  text-align: center;
+  font-size: 25px;
+}
+
+.footer__year{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.github-container {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+.github-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.rsschool-logo {
+  width: 150px;
+  height: 50px;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer__container {
+    flex-direction: row;
+  }
+}
+/* endregion Footer section */
