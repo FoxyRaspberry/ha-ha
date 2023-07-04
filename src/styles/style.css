@@ -38,14 +38,35 @@ p {
 }
 
 .wrapper {
+  width: 300px;
   margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 708px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+  }
 }
 /* endregion Common rules */
 
 /* region Header section */
 .header__section {
   font-family: "Mali", cursive;
-  font-size: 40px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__section {
+    font-size: 40px;
+  }
 }
 
 .header__container {
@@ -54,7 +75,7 @@ p {
   flex-direction: column;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .header__container {
     flex-direction: row;
   }
@@ -65,7 +86,6 @@ p {
 }
 
 .header__photo-container {
-  padding: 10px;
   text-align: center;
 }
 
@@ -73,18 +93,12 @@ p {
   border-radius: 70px;
   box-shadow: 20px -10px 20px 5px rgb(111 190 252 / 79%);
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
 }
 
-@media screen and (min-width: 570px) {
+@media screen and (min-width: 768px) {
   .header__photo {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header__photo {
-    width: 300px;
+    max-width: 400px;
   }
 }
 /* endregion Header section */
@@ -92,11 +106,16 @@ p {
 /* region Content section */
 .content__section {
   font-family: "Mali", cursive;
-  font-size: 30px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .content__section {
+    font-size: 30px;
+  }
 }
 
 .content__grid-container {
-  padding: 0px 20px;
   display: grid;
   justify-content: space-around;
   grid-template-areas: 
@@ -110,7 +129,7 @@ p {
   row-gap: 20px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .content__grid-container {
     grid-template-areas: 
     "about-me contacts"
@@ -132,31 +151,38 @@ p {
 
 .about-me__container {
   grid-area: about-me;
+  width: 300px;
 }
 
 .education__container {
   grid-area: education;
+  width: 300px;
 }
 
 .courses__container {
   grid-area: courses;
+  width: 300px;
 }
 
 .code-example__container {
   grid-area: code-example;
+  width: 300px;
 }
 
 .code-example__example-container {
   overflow-x: auto;
   padding: 10px;
+  width: 300px;
 }
 
 .contacts__container {
   grid-area: contacts;
+  width: 300px;
 }
 
 .skills__container {
   grid-area: skills;
+  width: 300px;
 }
 
 .skills__it-title {
@@ -165,6 +191,27 @@ p {
 
 .languages__container {
   grid-area: languages;
+  width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me__container,
+  .education__container,
+  .courses__container,
+  .code-example__container,
+  .code-example__example-container,
+  .contacts__container,
+  .skills__container,
+  .languages__container{
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .code-example__container,
+  .code-example__example-container {
+    width: 1200px;
+  }
 }
 /* endregion Content section */
 
@@ -182,7 +229,7 @@ p {
   align-items: center;
   flex-direction: column;
   row-gap: 30px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .footer__github-container,
@@ -213,7 +260,7 @@ p {
   height: 50px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .footer__container {
     flex-direction: row;
   }
