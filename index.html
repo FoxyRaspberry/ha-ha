@@ -63,32 +63,31 @@
         <div class="code-example__container">
           <article>
             <h2>Code-example</h2>
-            <p>Implementing an animated frame in CSS.</p>
+            <p>Implementing the display of pet cards using Map.</p>
             <pre class="code-example__example-container">
-.experience__frame {
-  margin: 30px;
-  border: 8px solid #a843c9;
-  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
-  background: #cfacf4;
-  box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
-  animation: frame 10s infinite;
-}
+function getPagesMap(pets, countCardsOnPage) {
+  const paginationPets = [];
+  for (let index = 0; index < 6; index++) {
+    const part = pets.map(function(pet) {
+      return {
+        ...pet,
+        id: index * pets.length + pet.id,
+      };
+    });
+    paginationPets.push(...part);
+  }
 
-@keyframes frame {
-  0% {
-    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
-    box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+  const pagesMap = new Map();
+  const pageCount = paginationPets.length / countCardsOnPage;
+  for (let pageNumber = 1; pageNumber <= pageCount; pageNumber++) {
+    const petsOnCurrentPage = paginationPets.splice(0, countCardsOnPage);
+    const mixedPetsForCurrentPage = [];
+    for (let index = 1; index <= countCardsOnPage; index++) {
+      mixedPetsForCurrentPage.push(getRandomItem(petsOnCurrentPage));
+    }
+    pagesMap.set(pageNumber, mixedPetsForCurrentPage);
   }
-  25% {
-    border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
-  }
-  50% {
-    border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
-    box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
-  }
-  75% {
-    border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
-  }
+  return pagesMap;
 }
           </pre>
           </article>
@@ -121,8 +120,10 @@
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript</li>
+              <li>TypeScript</li>
               <li>Git, GitHub</li>
               <li>Figma</li>
+              <li>JSON</li>
             </ul>
           </article>
         </div>
